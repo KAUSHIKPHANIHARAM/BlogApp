@@ -1,0 +1,97 @@
+get http://localhost:4001/author-api/author
+
+###
+get http://localhost:4001/author-api/articles
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+
+
+###
+post http://localhost:4001/author-api/login
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Kaushik",
+    "password":"Kaushik@123"    
+}
+
+###
+post http://localhost:4001/author-api/author
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Kaushik",
+    "password":"Kaushik@123",    
+    "email":"Kaushik@gmail.com"
+}
+
+### add new article
+post http://localhost:4001/author-api/article
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "title":"Core JAVA",
+    "category":"Programming",
+    "content":"Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA),[16] meaning that compiled Java code can run on all platforms that support Java without the need to recompile.[17] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages.",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Deva",
+    "comments":[],
+    "status":true,
+    "likes":[],
+    "views":0
+}
+
+### modify article
+put http://localhost:4001/author-api/article
+Content-Type: application/json
+
+{
+    "articleId":"1735567881",
+    "title":"Core JAVA",
+    "category":"Programming",
+    "content":"Java is a high-level, object-oriented programming language known for its platform independence, enabled by the Java Virtual Machine (JVM). It follows the Write Once, Run Anywhere (WORA) principle, making it widely used for developing applications across various platforms. Java supports multithreading, automatic memory management (garbage collection), and a rich set of libraries, making it suitable for web, mobile, and enterprise applications.",
+    "dateOfCreation":"2024-12-30T14:11:21.629Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Kaushik",
+    "comments":[],
+    "status":true
+}
+
+### soft delete
+put http://localhost:4001/author-api/article/1735567881
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+Content-Type: application/json
+
+{
+    "articleId":"1735567881",
+    "title":"Core JAVA",
+    "category":"Programming",
+    "content":"Java is a high-level, object-oriented programming language known for its platform independence, enabled by the Java Virtual Machine (JVM). It follows the Write Once, Run Anywhere (WORA) principle, making it widely used for developing applications across various platforms. Java supports multithreading, automatic memory management (garbage collection), and a rich set of libraries, making it suitable for web, mobile, and enterprise applications.",
+    "dateOfCreation":"2024-12-30T14:11:21.629Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Deva",
+    "comments":[],
+    "status":false
+}
+
+### get articles with name
+get http://localhost:4001/author-api/articles/Deva
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+
+###
+put http://localhost:4001/author-api/likes/67d4376e94ab3fee0126bf30
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+Content-Type: application/json
+
+{
+    "username": "Deva"
+}
+
+###
+put http://localhost:4001/author-api/views/67d4376e94ab3fee0126bf30
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldmEiLCJpYXQiOjE3NDE5NDYyODEsImV4cCI6MTc0MjAzMjY4MX0.-D66h03Hnh89h50Nd6Y343GgqNM8COWa8ouFIimf1dA
+ 

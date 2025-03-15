@@ -1,0 +1,33 @@
+post http://localhost:4001/user-api/user
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"PVRK",
+    "password":"PVRK@123",    
+    "email":"Pvrk@gmail.com"
+}
+
+###
+post http://localhost:4001/user-api/login
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"Ram",
+    "password":"Ram@123"    
+}
+
+###Readin Articles
+get http://localhost:4001/user-api/articles
+
+###
+post http://localhost:4001/user-api/comment
+Content-Type: application/json
+
+{         
+    "username":"Ram",
+    "comment":"Java is soo funny!!!!!"    
+}
+###
+get http://localhost:4001/user-api/user

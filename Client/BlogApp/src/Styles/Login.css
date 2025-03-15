@@ -1,0 +1,174 @@
+ .login-page {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: linear-gradient(to right, #004aad, #0077cc);
+     color: white;
+     font-family: 'Poppins', sans-serif;
+ }
+
+
+ .login-left {
+     flex: 1;
+     text-align: center;
+     padding: 50px;
+ }
+
+ .login-image {
+     width: 80%;
+     max-width: 400px;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .login-left h2 {
+     font-size: 2rem;
+     margin-top: 20px;
+ }
+
+ .login-left p {
+     font-size: 1rem;
+     opacity: 0.9;
+ }
+
+
+ .login-right {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .login-form {
+     background: white;
+     color: black;
+     padding: 40px;
+     border-radius: 10px;
+     width: 90%;
+     max-width: 400px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+     text-align: center;
+ }
+
+ .login-form h1 {
+     font-size: 2rem;
+     margin-bottom: 10px;
+     color: #004aad;
+ }
+
+ .login-subtitle {
+     font-size: 1rem;
+     margin-bottom: 20px;
+     color: #333;
+ }
+
+
+ .error-message {
+     color: red;
+     font-size: 0.9rem;
+     background: rgba(255, 0, 0, 0.1);
+     padding: 8px;
+     border-radius: 5px;
+     margin-bottom: 10px;
+ }
+
+
+ .radio-group {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     margin: 15px 0;
+ }
+
+ .radio-group label {
+     cursor: pointer;
+     font-size: 1rem;
+ }
+
+
+ .input-group {
+     position: relative;
+     margin: 15px 0;
+ }
+
+ .input-group input {
+     width: 100%;
+     padding: 12px 15px;
+     padding-left: 40px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     font-size: 1rem;
+     transition: 0.3s;
+ }
+
+ .input-group input:focus {
+     border-color: #004aad;
+     outline: none;
+     box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
+ }
+
+
+ .input-icon {
+     position: absolute;
+     left: 12px;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.2rem;
+     color: #004aad;
+ }
+
+
+ .login-button {
+     width: 100%;
+     padding: 12px;
+     font-size: 1.2rem;
+     background: #004aad;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: 0.3s;
+     font-weight: bold;
+ }
+
+ .login-button:hover {
+     background: #003399;
+ }
+
+
+ .register-link {
+     margin-top: 15px;
+     font-size: 0.9rem;
+ }
+
+ .register-link a {
+     color: #004aad;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ .register-link a:hover {
+     text-decoration: underline;
+ }
+
+
+ @media (max-width: 768px) {
+     .login-page {
+         flex-direction: column;
+         padding: 20px;
+     }
+
+     .login-left {
+         padding: 30px;
+     }
+
+     .login-image {
+         width: 60%;
+     }
+
+     .login-form {
+         width: 100%;
+         max-width: 350px;
+     }
+ }

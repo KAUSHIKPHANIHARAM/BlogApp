@@ -1,0 +1,90 @@
+ .add-article-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background: linear-gradient(to bottom, #004aad, #0066cc, #0099ff);
+     padding: 20px;
+ }
+
+ .card {
+     width: 100%;
+     max-width: 600px;
+     background: white;
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+
+
+ .card-title {
+     font-size: 2rem;
+     font-weight: bold;
+     color: #004aad;
+     margin-bottom: 20px;
+ }
+
+ .article-form {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .article-form label {
+     font-weight: bold;
+     color: #333;
+     text-align: left;
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ .form-control,
+ .form-select {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 1rem;
+ }
+
+ textarea.form-control {
+     height: 120px;
+     resize: none;
+ }
+
+ .btn-submit {
+     background: #004aad;
+     color: white;
+     border: none;
+     padding: 12px 20px;
+     font-size: 1.2rem;
+     cursor: pointer;
+     border-radius: 5px;
+     transition: background 0.3s, transform 0.2s;
+ }
+
+ .btn-submit:hover {
+     background: #003399;
+     transform: scale(1.05);
+ }
+
+ @media (max-width: 768px) {
+     .card {
+         padding: 20px;
+     }
+
+     .card-title {
+         font-size: 1.8rem;
+     }
+
+     .form-control,
+     .form-select {
+         font-size: 0.9rem;
+     }
+
+     .btn-submit {
+         font-size: 1rem;
+         padding: 10px;
+     }
+ }

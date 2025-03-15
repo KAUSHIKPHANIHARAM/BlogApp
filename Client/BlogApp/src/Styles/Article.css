@@ -1,0 +1,111 @@
+.article-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-delete-container {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+    color: #0056b3;
+}
+
+.display-3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.fs-4 {
+    font-size: 1.25rem;
+}
+
+.lead {
+    font-size: 1.2rem;
+}
+
+.comment-card {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.comment-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.comment-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background: #218838;
+}
+
+.article-form label {
+    font-weight: bold;
+}
+
+.article-form input,
+.article-form select,
+.article-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.article-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.article-form button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article-form input,
+    .article-form select,
+    .article-form textarea {
+        font-size: 1rem;
+    }
+}

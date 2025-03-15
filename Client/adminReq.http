@@ -1,0 +1,11 @@
+###
+get http://localhost:4001/admin-api/admin
+
+###
+post http://localhost:4001/admin-api/login
+
+###
+get http://localhost:4001/admin-api/articles
+
+###
+post http://localhost:4001/admin-api/admin
