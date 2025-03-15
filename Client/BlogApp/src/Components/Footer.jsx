@@ -4,6 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaPhone
 import { motion } from 'framer-motion';
 import '../Styles/Footer.css';
 
+
 function Footer() {
     const currentYear = new Date().getFullYear();
 
@@ -27,6 +28,10 @@ function Footer() {
             transition: { duration: 0.5 }
         }
     };
+
+    function subscribe() {
+        alert("Subscription Done!!!");
+    }
 
     return (
         <footer className="footer">
@@ -140,8 +145,8 @@ function Footer() {
                     <div className="newsletter">
                         <h4>Subscribe to Newsletter</h4>
                         <div className="newsletter-form">
-                            <input type="email" placeholder="Your Email" />
-                            <motion.button
+                            <input type="email" placeholder="Your Email" required />
+                            <motion.button onClick={subscribe}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
